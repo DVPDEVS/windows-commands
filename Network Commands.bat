@@ -3,8 +3,6 @@ color 0F
 
 echo \x1b[37;40mNetwork Command basics in Command Prompt (cmd) courtesy of @kaano_72 on Discord
 echo:
-
-:text
 echo        ipconfig                IP Address
 echo        ipconfig /all           Full network details
 echo        ipconfig /release       Release your current IP address
