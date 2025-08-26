@@ -1,0 +1,71 @@
+@echo off
+:: Enable Virtual Terminal Processing (Windows 10+)
+for /f "tokens=2 delims=:" %%i in ('"prompt $H & for %%b in (1) do rem"') do set "ESC=%%i"
+
+:: Print colored message
+echo %ESC%[31;40m Task creation failed! Please do one of the following: %ESC%[0m
+
+
+Absolutely! Here's a handy chart of **copy-pasteable characters and sequences** commonly used in Windows Console Virtual Terminal (VT) sequences. These are based on ANSI escape codes, which control text formatting, colors, and cursor movement in terminal environments.
+
+### 🎨 Text Formatting & Color Sequences
+
+| **Effect**            | **Escape Sequence**         | **Description**                     |
+|----------------------|-----------------------------|-------------------------------------|
+| Bold                 | `\x1b[1m`                    | Makes text bold                     |
+| Underline            | `\x1b[4m`                    | Underlines text                     |
+| Reset                | `\x1b[0m`                    | Resets all attributes               |
+| Inverse              | `\x1b[7m`                    | Swaps foreground/background colors  |
+
+### 🌈 Foreground Colors
+
+| **Color**     | **Escape Sequence** |
+|--------------|---------------------|
+| Black        | `\x1b[30m`          |
+| Red          | `\x1b[31m`          |
+| Green        | `\x1b[32m`          |
+| Yellow       | `\x1b[33m`          |
+| Blue         | `\x1b[34m`          |
+| Magenta      | `\x1b[35m`          |
+| Cyan         | `\x1b[36m`          |
+| White        | `\x1b[37m`          |
+
+### 🖼 Background Colors
+
+| **Color**     | **Escape Sequence** |
+|--------------|---------------------|
+| Black        | `\x1b[40m`          |
+| Red          | `\x1b[41m`          |
+| Green        | `\x1b[42m`          |
+| Yellow       | `\x1b[43m`          |
+| Blue         | `\x1b[44m`          |
+| Magenta      | `\x1b[45m`          |
+| Cyan         | `\x1b[46m`          |
+| White        | `\x1b[47m`          |
+
+### 🧭 Cursor Control
+
+| **Action**             | **Escape Sequence** |
+|------------------------|---------------------|
+| Move Up (n lines)      | `\x1b[{n}A`         |
+| Move Down (n lines)    | `\x1b[{n}B`         |
+| Move Right (n columns) | `\x1b[{n}C`         |
+| Move Left (n columns)  | `\x1b[{n}D`         |
+| Save Cursor Position   | `\x1b[s`            |
+| Restore Cursor Position| `\x1b[u`            |
+
+### 🧹 Screen Control
+
+| **Action**             | **Escape Sequence** |
+|------------------------|---------------------|
+| Clear Screen           | `\x1b[2J`           |
+| Clear Line             | `\x1b[2K`           |
+| Scroll Up              | `\x1b[S`            |
+| Scroll Down            | `\x1b[T`            |
+
+You can copy and paste these sequences directly into your code or terminal (depending on support). If you're using a programming language like Python or C++, you may need to format them accordingly (e.g., using `"\033[1m"` instead of `\x1b[1m`).
+
+Want a cheat sheet for a specific language or use case?
+
+
+https://learn.microsoft.com/en-us/windows/console/console-virtual-terminal-sequence
